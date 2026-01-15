@@ -1,0 +1,258 @@
+/* About.css */
+.about-page {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.about-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Introduction */
+.about-intro h2 {
+  color: rgba(0, 0, 0, 0.878);
+  position: relative;
+  padding-bottom: 15px;
+  font-size: 32px;
+  text-align: left;
+}
+
+.about-intro h2::after {
+    
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  
+  border-radius: 2px;
+}
+
+.about-image-container {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-image-container:hover {
+  transform: translateY(-10px);
+}
+
+.about-image-container img {
+  height: 400px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Stats */
+.stat-item {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Amenities */
+.amenities-accordion .accordion-button {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: none;
+  font-weight: 600;
+}
+
+.amenities-accordion .accordion-button:not(.collapsed) {
+  color: #2c3e50;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+}
+
+.amenities-accordion .accordion-body {
+  background: #f8f9fa;
+}
+
+.category-icon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.amenity-item {
+  background: white;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.amenity-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-color: #3498db;
+}
+
+.amenity-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.amenity-item:hover .amenity-icon {
+  transform: scale(1.1);
+}
+
+.amenity-name {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+/* Category Cards */
+.amenity-category-card {
+  border: none;
+  transition: all 0.3s ease;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.amenity-category-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.amenity-category-card .card-header {
+  border: none;
+  padding: 1.25rem;
+}
+
+.amenity-category-card .card-body {
+  padding: 1.5rem;
+}
+
+/* Values */
+.value-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.value-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(52, 152, 219, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.value-card:hover .value-icon {
+  transform: scale(1.1);
+  background: rgba(52, 152, 219, 0.2);
+}
+
+.value-card h4 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.value-card p {
+  color: #7f8c8d;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 3rem 0;
+  }
+  
+  .about-intro h2 {
+    font-size: 2rem;
+  }
+  
+  .about-image-container {
+    margin-top: 2rem;
+  }
+  
+  .stat-item h3 {
+    font-size: 2.5rem;
+  }
+  
+  .amenity-item {
+    padding: 1rem;
+  }
+  
+  .amenity-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .amenities-accordion .accordion-button {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .amenity-category-card {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.amenity-category-card,
+.value-card,
+.stat-item {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.amenity-category-card:nth-child(1) { animation-delay: 0.1s; }
+.amenity-category-card:nth-child(2) { animation-delay: 0.2s; }
+.amenity-category-card:nth-child(3) { animation-delay: 0.3s; }
+.amenity-category-card:nth-child(4) { animation-delay: 0.4s; }
+.amenity-category-card:nth-child(5) { animation-delay: 0.5s; }
+.amenity-category-card:nth-child(6) { animation-delay: 0.6s; }

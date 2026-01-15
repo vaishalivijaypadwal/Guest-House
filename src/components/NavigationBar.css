@@ -1,0 +1,86 @@
+/* ===========================
+   NAVBAR HEIGHT
+=========================== */
+.navbar {
+  min-height: 120px;                 /* Overall navbar height */
+  padding: 0 1rem;
+}
+
+/* ===========================
+   NAV LINKS (DESKTOP)
+=========================== */
+.nav-link-custom {
+  height: 70px;                     /* Match navbar height */
+  display: flex;
+  align-items: center;              /* Vertical centering */
+  padding: 0 16px !important;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.nav-link-custom:hover {
+  background-color: #ea0a98e9;
+  transform: translateY(-2px);
+}
+
+.nav-link-custom.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+}
+
+/* ===========================
+   BRAND TEXT
+=========================== */
+.brand-text {
+  font-weight: bold;
+  font-size: 1.6rem;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===========================
+   ICONS
+=========================== */
+.nav-icon {
+  margin-right: 8px;
+  font-size: 1.1em;
+}
+
+/* ===========================
+   MOBILE NAV LINKS
+=========================== */
+.mobile-nav-link {
+  font-size: 1.1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-nav-link:last-child {
+  border-bottom: none;
+}
+
+/* ===========================
+   REMOVE DEFAULT BOOTSTRAP PADDING
+=========================== */
+.navbar-nav .nav-link {
+  font-size: 22px;
+
+  /* text color */
+  color: #ffffff;              /* change as needed */
+
+  /* padding: Top Bottom Left Right */
+  padding: 0px 16px;
+
+  /* rounded corners */
+  border-radius: 50px;
+
+  /* optional: smooth hover effect */
+  transition: all 0.3s ease;
+}
+
+/* optional hover effect */
+.navbar-nav .nav-link:hover {
+  background-color: #2020e1e0;
+  color: #ffffff;
+}
+
