@@ -358,17 +358,7 @@ const Contact = () => {
             </Card>
 
             {/* Additional Info */}
-            <div className="mt-4">
-              <div className="alert alert-info">
-                <h6 className="mb-2">
-                  <i className="bi bi-info-circle me-2"></i>
-                  Response Time
-                </h6>
-                <p className="mb-0 small">
-                  We typically respond within 24 hours on weekdays. For urgent inquiries, please call us directly.
-                </p>
-              </div>
-            </div>
+           
           </Col>
         </Row>
 
