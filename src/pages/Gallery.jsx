@@ -113,9 +113,7 @@ const Gallery = () => {
                       alt={room.title || `Room ${room.id}`}
                       onError={(e) => handleImageError(e, room.id)}
                     />
-                    <div className="category-badge">
-                      {room.category === 'exterior' ? 'Exterior' : 'Interior'}
-                    </div>
+                    
                     <div className="image-overlay">
                       
                     </div>

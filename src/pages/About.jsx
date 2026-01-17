@@ -20,40 +20,28 @@ const About = () => {
   // Amenities data organized by categories
   const amenitiesCategories = [
     {
-      title: "Basic Facilities",
+      
       icon: "🏨",
       color: "#3498db",
       items: [
-        { name: "Air Conditioning", icon: <FaSnowflake />, color: "#1abc9c" },
+        
         { name: "Refrigerator", icon: <FaUtensils />, color: "#e74c3c" },
         { name: "Laundry Service", icon: <FaTshirt />, color: "#9b59b6" },
         { name: "Room Service", icon: <FaConciergeBell />, color: "#f39c12" },
         { name: "Free Parking", icon: <FaCar />, color: "#2ecc71" }
       ]
     },
+    
     {
-      title: "General Services",
-      icon: "⚕️",
-      color: "#e74c3c",
-      items: [
-        { name: "Doctor on Call", icon: <FaUserMd />, color: "#e74c3c" },
-        { name: "Health and wellness", icon: <FaFirstAid />, color: "#2ecc71" },
-        { name: "First-aid Services", icon: <FaFirstAid />, color: "#e74c3c" },
-        { name: "Paid Shuttle Service", icon: <FaShuttleVan />, color: "#3498db" },
-        { name: "Paid Airport Transfers", icon: <FaPlane />, color: "#9b59b6" }
-      ]
-    },
-    {
-      title: "Room Amenities",
+     
       icon: "🛏️",
       color: "#9b59b6",
       items: [
         { name: "Sofa", icon: <FaCouch />, color: "#d35400" },
-        { name: "Air Conditioning", icon: <FaSnowflake />, color: "#1abc9c" },
+       
         { name: "Balcony", icon: <FaUmbrellaBeach />, color: "#27ae60" },
         { name: "Geyser/Water Heater", icon: <FaWater />, color: "#2980b9" },
-        { name: "Living Area", icon: <FaCouch />, color: "#8e44ad" },
-        { name: "Work Desk", icon: <FaDesktop />, color: "#2c3e50" },
+       
         { name: "King Size Bed", icon: <FaBed />, color: "#16a085" },
         { name: "Private Bath", icon: <FaBath />, color: "#34495e" },
         { name: "Smart TV", icon: <FaTv />, color: "#e74c3c" },
@@ -61,7 +49,7 @@ const About = () => {
       ]
     },
     {
-      title: "Payment Services",
+     
       icon: "💳",
       color: "#2ecc71",
       items: [
@@ -71,19 +59,18 @@ const About = () => {
       ]
     },
     {
-      title: "Safety and Security",
+     
       icon: "🛡️",
       color: "#e67e22",
       items: [
         { name: "Fire Extinguishers", icon: <FaFireExtinguisher />, color: "#e74c3c" },
         { name: "Security Guard", icon: <FaShieldAlt />, color: "#2c3e50" },
         { name: "CCTV", icon: <FaVideo />, color: "#3498db" },
-        { name: "Safe Deposit Box", icon: <FaShieldAlt />, color: "#f39c12" },
-        { name: "Emergency Exit", icon: <FaFireExtinguisher />, color: "#c0392b" }
+       
       ]
     },
     {
-      title: "Entertainment",
+     
       icon: "🎭",
       color: "#9b59b6",
       items: [
@@ -95,7 +82,7 @@ const About = () => {
       ]
     },
     {
-      title: "Outdoor Activities and Sports",
+     
       icon: "🚴",
       color: "#27ae60",
       items: [
@@ -105,38 +92,9 @@ const About = () => {
         { name: "Walking Trails", icon: <FaBicycle />, color: "#636e72" }
       ]
     },
-    {
-      title: "Common Area",
-      icon: "🏛️",
-      color: "#34495e",
-      items: [
-        { name: "Garden", icon: <FaTree />, color: "#27ae60" },
-        { name: "Balcony/Terrace", icon: <FaUmbrellaBeach />, color: "#f39c12" },
-        { name: "Lounge Area", icon: <FaCoffee />, color: "#8e44ad" }
-      ]
-    },
-    {
-      title: "Shopping",
-      icon: "🛍️",
-      color: "#e74c3c",
-      items: [
-        { name: "Grocery/Supermarket (Within Premise)", icon: <FaShoppingBag />, color: "#2ecc71" },
-        { name: "Souvenir Shop", icon: <FaShoppingBag />, color: "#f1c40f" },
-        { name: "Jewellery Shop", icon: <FaGem />, color: "#9b59b6" },
-        { name: "Convenience Store", icon: <FaShoppingBag />, color: "#3498db" }
-      ]
-    },
-    {
-      title: "Business Center and Conferences",
-      icon: "💼",
-      color: "#2c3e50",
-      items: [
-        { name: "Photocopying", icon: <FaCopy />, color: "#7f8c8d" },
-        { name: "Printer", icon: <FaPrint />, color: "#34495e" },
-        { name: "Meeting Room", icon: <FaDesktop />, color: "#3498db" },
-        { name: "Fax Service", icon: <FaPrint />, color: "#95a5a6" }
-      ]
-    },
+    
+    
+    
   ];
 
   // Image error handler
@@ -179,51 +137,51 @@ const About = () => {
         </Container>
       </section>
 
-      {/* Amenities Section */}
-      <section className="py-5 bg-light">
-        <Container>
-          <div className="text-center mb-5">
-            <h2 className="mb-4">Amenities & Facilities</h2>
-           
+      {/* Amenities Section - All in One Grid */}
+<section 
+  className="py-5" 
+  style={{ backgroundColor: 'hsla(324, 75%, 67%, 0.089)' }}
+>
+  <Container>
+    <div className="text-center mb-5">
+      <h2 className="mb-4">Amenities & Facilities</h2>
+    </div>
+
+    {/* All Amenities in One Grid */}
+    <Row>
+      {amenitiesCategories.flatMap((category, categoryIndex) => 
+        category.items.map((item, itemIndex) => ({
+          ...item,
+          category: category.title,
+          categoryColor: category.color,
+          categoryIcon: category.icon,
+          id: `${categoryIndex}-${itemIndex}`
+        }))
+      ).map((item) => (
+        <Col lg={3} md={4} sm={6} key={item.id} className="mb-4">
+          <div className="amenity-item d-flex align-items-center p-3 rounded bg-white shadow-sm h-100">
+            <div 
+              className="amenity-icon me-3 d-flex align-items-center justify-content-center rounded-circle flex-shrink-0"
+              style={{
+                color: item.color, 
+                backgroundColor: `${item.color}15`,
+                width: '48px',
+                height: '48px',
+                fontSize: '1.2rem'
+              }}
+            >
+              {item.icon}
+            </div>
+            <div className="d-flex flex-column">
+              <span className="amenity-name fw-medium mb-1">{item.name}</span>
+              <small className="text-muted">{item.category}</small>
+            </div>
           </div>
-
-          <Accordion defaultActiveKey="0" className="amenities-accordion">
-            {amenitiesCategories.map((category, categoryIndex) => (
-              <Accordion.Item eventKey={categoryIndex.toString()} key={categoryIndex}>
-                <Accordion.Header>
-                  <div className="d-flex align-items-center">
-                    <span className="category-icon me-3" style={{color: category.color}}>
-                      {category.icon}
-                    </span>
-                    <h5 className="mb-0">{category.title}</h5>
-                    <span className="badge bg-secondary ms-3">
-                      {category.items.length} amenities
-                    </span>
-                  </div>
-                </Accordion.Header>
-                <Accordion.Body>
-                  <Row>
-                    {category.items.map((item, itemIndex) => (
-                      <Col lg={4} md={6} key={itemIndex} className="mb-3">
-                        <div className="amenity-item d-flex align-items-center p-3 rounded">
-                          <div 
-                            className="amenity-icon me-3" 
-                            style={{color: item.color, backgroundColor: `${item.color}15`}}
-                          >
-                            {item.icon}
-                          </div>
-                          <span className="amenity-name">{item.name}</span>
-                        </div>
-                      </Col>
-                    ))}
-                  </Row>
-                </Accordion.Body>
-              </Accordion.Item>
-            ))}
-          </Accordion>
-        </Container>
-      </section>
-
+        </Col>
+      ))}
+    </Row>
+  </Container>
+</section>
       {/* Add Footer Component */}
       <Footer />
     </div>

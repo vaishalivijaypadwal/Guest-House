@@ -233,7 +233,7 @@ const Contact = () => {
                   <Row>
                     <Col md={6}>
                       <Form.Group className="mb-3">
-                        <Form.Label>Full Name *</Form.Label>
+                        <Form.Label>Full Name </Form.Label>
                         <Form.Control
                           type="text"
                           name="name"
@@ -251,7 +251,7 @@ const Contact = () => {
                     
                     <Col md={6}>
                       <Form.Group className="mb-3">
-                        <Form.Label>Phone Number *</Form.Label>
+                        <Form.Label>Phone Number </Form.Label>
                         <Form.Control
                           type="tel"
                           name="phone"
@@ -271,7 +271,7 @@ const Contact = () => {
                   <Row>
                     <Col md={6}>
                       <Form.Group className="mb-3">
-                        <Form.Label>Email Address *</Form.Label>
+                        <Form.Label>Email Address </Form.Label>
                         <Form.Control
                           type="email"
                           name="email"
@@ -306,7 +306,7 @@ const Contact = () => {
                   </Row>
 
                   <Form.Group className="mb-4">
-                    <Form.Label>Your Message *</Form.Label>
+                    <Form.Label>Your Message </Form.Label>
                     <Form.Control
                       as="textarea"
                       rows={5}

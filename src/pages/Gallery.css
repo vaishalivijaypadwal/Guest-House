@@ -2,8 +2,8 @@
 .gallery-page {
   width: 100%;
   background: hsla(324, 75%, 67%, 0.089);
-  padding-left: 90px;
-  padding-right: 90px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 /* ================= FILTER BUTTONS ================= */
@@ -37,14 +37,14 @@
 .gallery-card {
   border: none;
   overflow: hidden;
-  border-radius: 14px;
+  border-radius: 0px;
 }
 
 /* ================= IMAGE WRAPPER ================= */
 .gallery-image-wrapper {
   position: relative;
   overflow: hidden;
-  border-radius: 14px;
+  border-radius: 0px;
 }
 
 .gallery-image-wrapper img {

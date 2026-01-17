@@ -52,12 +52,12 @@ const Home = () => {
 
   // Feature highlights
   const features = [
-    { icon: <FaBed />, title: "Comfortable Rooms", count: "12 Rooms" },
-    { icon: <FaSwimmingPool />, title: "Swimming Pool", count: "2 Pools" },
-    { icon: <FaUtensils />, title: "Restaurant", count: "Multi-Cuisine" },
-    { icon: <FaWifi />, title: "Free WiFi", count: "High Speed" },
-    { icon: <FaCar />, title: "Parking", count: "Secure Area" },
-    { icon: <FaUmbrellaBeach />, title: "Beach Access", count: "5 min walk" }
+    { icon: <FaBed />, title: "Comfortable Rooms" },
+    { icon: <FaSwimmingPool />, title: "Swimming Pool"},
+    { icon: <FaUtensils />, title: "Restaurant"},
+    { icon: <FaWifi />, title: "Free WiFi" },
+    { icon: <FaCar />, title: "Parking" },
+    { icon: <FaUmbrellaBeach />, title: "Beach Access"}
   ];
 
   // Handle image loading
@@ -208,29 +208,29 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="features-section py-5 bg-light">
-        <Container>
-          <div className="text-center mb-5">
-            <h2 className="display-5 fw-bold mb-3">Facilities & Amenities</h2>
-          </div>
-          
-          <Row>
-            {features.map((feature, index) => (
-              <Col md={4} lg={2} key={index} className="mb-4">
-                <Card className="feature-card text-center border-0 shadow-sm">
-                  <Card.Body className="p-4">
-                    <div className="feature-icon mb-3">
-                      {feature.icon}
-                    </div>
-                    <Card.Title>{feature.title}</Card.Title>
-                    <Card.Text className="text-muted">{feature.count}</Card.Text>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
+     <section className="features-section py-5" style={{ backgroundColor: 'hsla(324, 75%, 67%, 0.089)' }}>
+  <Container>
+    <div className="text-center mb-5">
+      <h2 className="display-5 fw-bold mb-3">Facilities & Amenities</h2>
+    </div>
+    
+    <Row>
+      {features.map((feature, index) => (
+        <Col md={4} lg={2} key={index} className="mb-4">
+          <Card className="feature-card text-center border-0 shadow-sm">
+            <Card.Body className="p-4">
+              <div className="feature-icon mb-3">
+                {feature.icon}
+              </div>
+              <Card.Title>{feature.title}</Card.Title>
+              <Card.Text className="text-muted">{feature.count}</Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      ))}
+    </Row>
+  </Container>
+</section>
 
       {/* About Preview Section */}
       <section className="about-preview-section py-5">
