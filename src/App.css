@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  width: 100%;
+  width: 100vw;        /* Full viewport width */
+  max-width: 100%;
 }
 
 

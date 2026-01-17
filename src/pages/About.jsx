@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, Card, Accordion } from 'react-bootstrap';
 import { 
   FaSnowflake, FaTshirt, FaCar, FaUserMd, FaFirstAid,
@@ -10,9 +10,13 @@ import {
   FaUtensils, FaWifi, FaSwimmingPool, FaTv, FaCoffee,
   FaConciergeBell, FaBed, FaBath, FaWind, FaSun
 } from 'react-icons/fa';
+import Footer from '../components/Footer'; // Import the Footer component
 import './About.css';
 
 const About = () => {
+  // State for image error handling
+  const [imageError, setImageError] = useState(false);
+
   // Amenities data organized by categories
   const amenitiesCategories = [
     {
@@ -107,7 +111,6 @@ const About = () => {
       color: "#34495e",
       items: [
         { name: "Garden", icon: <FaTree />, color: "#27ae60" },
-       
         { name: "Balcony/Terrace", icon: <FaUmbrellaBeach />, color: "#f39c12" },
         { name: "Lounge Area", icon: <FaCoffee />, color: "#8e44ad" }
       ]
@@ -134,12 +137,19 @@ const About = () => {
         { name: "Fax Service", icon: <FaPrint />, color: "#95a5a6" }
       ]
     },
-    
   ];
+
+  // Image error handler
+  const handleImageError = (e) => {
+    e.target.onerror = null;
+    setImageError(true);
+    e.target.src = "/images/about1.jpg";
+  };
 
   return (
     <div className="about-page">
-     
+      {/* Header Section */}
+      
 
       {/* Introduction */}
       <section className="py-5">
@@ -149,25 +159,19 @@ const About = () => {
               <div className="about-intro">
                 <h2 className="mb-4">Welcome to Clares Cove Guest House</h2>
                 <p className="lead">
-                 he Clarem Guest House is situated in Varca South Goa, a state in western India with coastlines stretching along the Arabian Sea. Goa is one of the most loved tourist destination known for its beaches. The property is at a distance of 28 km from Goa Dabolim International Airport while Madgaon Railway Station is 9 km and Margao Bus Terminal is 10 km away.
-For a relaxed and comfortable stay, an array of facilities are offered such as front desk, parking and room service. These spacious guest-rooms are equipped with exquisite and comfortable furniture and bedding. The apartments are fitted with amenities like television, telephone, attached bathroom and various other essential bathroom toiletries.
-Cool off and have a relax stay at Clarem Guest House!
-</p>
-                <div className="mt-4">
-                 
-                </div>
+                  The Clarem Guest House is situated in Varca South Goa, a state in western India with coastlines stretching along the Arabian Sea. Goa is one of the most loved tourist destination known for its beaches. The property is at a distance of 28 km from Goa Dabolim International Airport while Madgaon Railway Station is 9 km and Margao Bus Terminal is 10 km away.
+                  For a relaxed and comfortable stay, an array of facilities are offered such as front desk, parking and room service. These spacious guest-rooms are equipped with exquisite and comfortable furniture and bedding. The apartments are fitted with amenities like television, telephone, attached bathroom and various other essential bathroom toiletries.
+                  Cool off and have a relax stay at Clarem Guest House!
+                </p>
               </div>
             </Col>
             <Col lg={6}>
               <div className="about-image-container">
                 <img 
-                  src="/images/about-main.jpg" 
+                  src="/images/about1-main.jpg" 
                   alt="Clares Cove Guest House"
                   className="img-fluid rounded shadow-lg"
-                  onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80";
-                  }}
+                  onError={handleImageError}
                 />
               </div>
             </Col>
@@ -175,13 +179,11 @@ Cool off and have a relax stay at Clarem Guest House!
         </Container>
       </section>
 
-     
-
       {/* Amenities Section */}
-      <section className="py-5">
+      <section className="py-5 bg-light">
         <Container>
           <div className="text-center mb-5">
-            <h2 className="display-5 fw-bold mb-3"> Amenities & Facilities</h2>
+            <h2 className="mb-4">Amenities & Facilities</h2>
            
           </div>
 
@@ -219,13 +221,11 @@ Cool off and have a relax stay at Clarem Guest House!
               </Accordion.Item>
             ))}
           </Accordion>
-
-          
-          
         </Container>
       </section>
 
-      
+      {/* Add Footer Component */}
+      <Footer />
     </div>
   );
 };

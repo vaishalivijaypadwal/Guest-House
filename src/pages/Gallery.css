@@ -1,103 +1,88 @@
-/* Gallery.css */
+/* ================= PAGE ================= */
 .gallery-page {
-  min-height: 100vh;
-  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
-}
-
-/* Gallery Header */
-.gallery-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
-              url('https://images.unsplash.com/photo-1616594039964-ae9021a400a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  padding: 100px 0;
-}
-
-/* Gallery Carousel */
-.gallery-carousel {
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-.carousel-image-container {
-  height: 500px;
-  overflow: hidden;
-  position: relative;
-}
-
-.gallery-carousel-img {
-  height: 100%;
   width: 100%;
-  object-fit: cover;
-  transition: transform 6s ease;
+  background: hsla(324, 75%, 67%, 0.089);
+  padding-left: 90px;
+  padding-right: 90px;
 }
 
-.gallery-carousel .carousel-item:hover .gallery-carousel-img {
-  transform: scale(1.1);
+/* ================= FILTER BUTTONS ================= */
+.filter-section {
+  border-bottom: 1px solid #e9ecef;
 }
 
-.gallery-carousel-caption {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 30px;
-  border-radius: 0 0 20px 20px;
-}
-
-.gallery-carousel-caption h3 {
-  font-size: 2.2rem;
-  font-weight: bold;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-}
-
-.gallery-carousel-caption p {
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: 10px auto;
-}
-
-/* Gallery Room Cards */
-.gallery-room-card {
-  border: none;
-  border-radius: 15px;
-  overflow: hidden;
-  transition: all 0.3s ease;
+.filter-btn {
+  padding: 10px 28px;
+  border-radius: 0px;
+  border: 2px solid #0d6efd;
+  background: transparent;
+  color: #0d6efd;
+  font-size: 20px;
+  font-weight: 500;
   cursor: pointer;
-  height: 100%;
+  transition: all 0.3s ease;
 }
 
-.gallery-room-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+.filter-btn:hover {
+  background-color: #0d6efd;
+  color: #ffffff;
 }
 
+.filter-btn.active {
+  background-color: #0d6efd;
+  color: #ffffff;
+}
+
+/* ================= GALLERY CARD ================= */
+.gallery-card {
+  border: none;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+/* ================= IMAGE WRAPPER ================= */
 .gallery-image-wrapper {
   position: relative;
-  height: 250px;
   overflow: hidden;
+  border-radius: 14px;
 }
 
 .gallery-image-wrapper img {
-  height: 100%;
   width: 100%;
+  height: 260px;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.gallery-room-card:hover .gallery-image-wrapper img {
+/* Hover Zoom */
+.gallery-image-wrapper:hover img {
   transform: scale(1.1);
 }
 
+/* ================= CLICKABLE ================= */
+.clickable-image {
+  cursor: pointer;
+}
+
+/* ================= CATEGORY BADGE ================= */
+.category-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background-color: rgba(0, 0, 0, 0.65);
+  color: #ffffff;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 20px;
+  font-weight: 500;
+  z-index: 2;
+}
+
+/* ================= OVERLAY ================= */
 .image-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -105,146 +90,78 @@
   transition: opacity 0.3s ease;
 }
 
-.gallery-room-card:hover .image-overlay {
+.gallery-image-wrapper:hover .image-overlay {
   opacity: 1;
 }
 
-.view-details-btn {
-  color: white;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 10px 20px;
-  border-radius: 25px;
-  font-weight: 500;
-  backdrop-filter: blur(5px);
+.view-text {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  background: rgba(13, 110, 253, 0.85);
+  padding: 10px 22px;
+  border-radius: 30px;
 }
 
-.room-category-badge {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  background: rgba(13, 110, 253, 0.9);
-  color: white;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 500;
+/* ================= MODAL ================= */
+.gallery-modal .modal-content {
+  border-radius: 16px;
+  overflow: hidden;
 }
 
-.room-size-badge {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: rgba(255, 255, 255, 0.9);
-  color: #333;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 500;
+.gallery-modal .modal-header {
+  padding: 12px 20px;
 }
 
-/* Filter Section */
-.filter-section {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+/* ================= MODAL IMAGE ================= */
+.modal-image-container {
+  max-height: 80vh;
+  overflow: hidden;
 }
 
-/* Modal Styles */
-.room-modal-content img {
+.modal-image-container img {
   width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  border-radius: 10px;
+  height: 80vh;
+  object-fit: contain;
+  background-color: #000000;
 }
 
-.room-specs {
-  background: #f8f9fa;
-  padding: 20px;
-  border-radius: 10px;
+/* ================= CAROUSEL ================= */
+.gallery-modal-carousel .carousel-control-prev-icon,
+.gallery-modal-carousel .carousel-control-next-icon {
+  filter: invert(1);
 }
 
-.spec-item {
-  padding: 10px;
-  background: white;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+/* ================= CAROUSEL CAPTION ================= */
+.gallery-modal-carousel .carousel-caption {
+  bottom: 20px;
 }
 
-/* Loading Animation */
-.image-loading {
+/* ================= IMAGE COUNTER ================= */
+.image-counter {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.5);
+  bottom: 15px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
 }
 
-/* Responsive Design */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
-  .gallery-header {
-    padding: 60px 0;
+  .gallery-image-wrapper img {
+    height: 220px;
   }
-  
-  .carousel-image-container {
-    height: 350px;
-  }
-  
-  .gallery-carousel-caption {
-    padding: 15px;
-  }
-  
-  .gallery-carousel-caption h3 {
-    font-size: 1.5rem;
-  }
-  
-  .gallery-carousel-caption p {
-    font-size: 1rem;
-  }
-  
-  .gallery-image-wrapper {
-    height: 200px;
-  }
-}
 
-@media (max-width: 576px) {
-  .carousel-image-container {
-    height: 250px;
+  .modal-image-container img {
+    height: 65vh;
   }
-  
-  .filter-section {
-    position: static;
-  }
-  
-  .filter-section .d-flex {
-    overflow-x: auto;
-    padding-bottom: 10px;
-    justify-content: flex-start !important;
-  }
-  
-  .filter-section .btn {
-    flex-shrink: 0;
-  }
-}
 
-/* Animation for card entrance */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+  .filter-btn {
+    padding: 8px 20px;
+    font-size: 14px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.gallery-room-card {
-  animation: fadeInUp 0.5s ease forwards;
-  animation-delay: calc(var(--card-index, 0) * 0.1s);
 }

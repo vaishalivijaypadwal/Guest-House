@@ -3,6 +3,8 @@
 =========================== */
 .contact-page {
   background: hsla(324, 75%, 67%, 0.089);
+  padding-left: 90px;
+  padding-right: 90px;
 }
 
 /* ===========================
@@ -35,8 +37,15 @@
 
 .contact-info-section h3 {
   font-weight: 600;
-  
+  margin-bottom: 20px;
+  text-align: left;
+  letter-spacing: 0.3px;
+  color: rgba(0, 0, 0, 0.878);
+  position: relative;
+  font-size: 32px;
+  text-align: left;
 }
+
 
 /* ===========================
    CONTACT CARDS
@@ -89,6 +98,13 @@
 
 .contact-form-card h3 {
   font-weight: 600;
+  margin-bottom: 20px;
+  text-align: left;
+  letter-spacing: 0.3px;
+  color: rgba(0, 0, 0, 0.878);
+  position: relative;
+  font-size: 28px;
+  text-align: left;
 }
 
 .contact-form-card .form-control,
@@ -107,6 +123,7 @@
 =========================== */
 .contact-form-card button[type="submit"] {
   border-radius: 30px;
+  font-size: 18px;
   font-weight: 500;
   transition: all 0.3s ease;
 }
@@ -148,3 +165,213 @@
     height: 300px;
   }
 }
+/* Contact info column */
+.contact-info-section {
+  text-align: left;
+}
+
+/* Main heading */
+.contact-info-section h3 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: left;
+  letter-spacing: 0.3px;
+  color: rgba(0, 0, 0, 0.878);
+  position: relative;
+  font-size: 28px;
+  text-align: left;
+}
+
+/* Description text */
+.contact-info-section p {
+ color: rgba(0, 0, 0, 0.749);
+  line-height: 1.8;
+  font-size: 22px;
+  font-weight: 400;
+  text-align: left;
+}
+
+/* Contact cards container */
+.contact-cards {
+  margin-top: 10px;
+}
+
+/* Individual contact card */
+.contact-card {
+  border: none;
+  border-radius: 12px;
+  background: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Icon styling */
+.contact-icon {
+  font-size: 24px;
+  color: #0d6efd;
+  min-width: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card title */
+.contact-card h5 {
+  color: rgba(0, 0, 0, 0.856);
+  line-height: 1.8;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Card details */
+.contact-card p {
+  color: rgba(0, 0, 0, 0.749);
+  line-height: 1.8;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+}
+
+/* Card action button */
+.contact-card .btn {
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 4px 14px;
+}
+
+/* Social media section */
+.social-links h5 {
+  color: rgba(0, 0, 0, 0.749);
+  line-height: 1.8;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Social icons */
+.social-link {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.856);
+  color: hsl(216, 63%, 49%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: #0d6efd;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-info-section h3 {
+    font-size: 24px;
+  }
+}
+
+/* Contact form card */
+.contact-form-card {
+  border-radius: 16px;
+  border: none;
+  background: #ffffff;
+}
+
+/* Card heading */
+.contact-form-card h3 {
+  font-weight: 600;
+  font-size: 28px;
+  color: #212529;
+  text-align: left;
+}
+
+/* Labels */
+.contact-form-card label {
+  color: rgba(0, 0, 0, 0.749);
+  line-height: 1.8;
+  font-size: 20x;
+  font-weight: 600;
+  text-align: left;
+  margin-bottom: 6px;
+}
+
+/* Inputs & selects */
+.contact-form-card .form-control,
+.contact-form-card .form-select {
+  border-radius: 10px;
+  padding: 10px 14px;
+  color: rgba(0, 0, 0, 0.749);
+  line-height: 1.8;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+  margin-bottom: 6px;
+  border: 1px solid #dee2e6;
+}
+
+.contact-form-card .form-control:focus,
+.contact-form-card .form-select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.25);
+}
+
+/* Textarea */
+.contact-form-card textarea {
+  resize: none;
+}
+
+/* Checkbox */
+.contact-form-card .form-check-label {
+  color: rgba(0, 0, 0, 0.749);
+  line-height: 1.8;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Submit button */
+.contact-form-card button {
+  border-radius: 10px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.contact-form-card button:hover {
+  transform: translateY(-2px);
+}
+
+/* Helper text */
+.contact-form-card .form-text {
+   color: rgba(0, 0, 0, 0.749);
+  line-height: 1.8;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Validation feedback */
+.contact-form-card .invalid-feedback {
+  font-size: 13px;
+}
+
+/* Loading spinner spacing */
+.contact-form-card .spinner-border {
+  vertical-align: middle;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-form-card h3 {
+    font-size: 24px;
+  }
+}
+

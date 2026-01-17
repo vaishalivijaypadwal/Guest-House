@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import Footer from '../components/Footer'; // Import the Footer component
 import { Form, Button, Alert, Row, Col, Container, Card } from 'react-bootstrap';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock, FaUser, FaPaperPlane } from 'react-icons/fa';
 import './Contact.css'; // Create this file for custom styles
@@ -114,8 +115,8 @@ const Contact = () => {
     {
       icon: <FaEnvelope />,
       title: 'Email Address',
-      details: ['info@luxuryliving.com'],
-      link: 'mailto:info@luxuryliving.com'
+      details: ['info@clarescove.com'],
+      link: 'mailto:info@clarescove.com'
     },
     {
       icon: <FaClock />,
@@ -136,10 +137,9 @@ const Contact = () => {
 
   return (
     <div className="contact-page">
-      <Container className="py-5">
-        {/* Header Section */}
-        
+    
 
+      <Container className="py-5">
         {submitted && (
           <Alert 
             variant="success" 
@@ -167,7 +167,7 @@ const Contact = () => {
             <div className="contact-info-section">
               <h3 className="mb-4">Get in Touch</h3>
               <p className="mb-4">
-                Have questions about our luxury rooms? Need assistance with booking? 
+                Have questions about our guest house? Need assistance with booking? 
                 Reach out to us through any of the channels below.
               </p>
               
@@ -233,10 +233,7 @@ const Contact = () => {
                   <Row>
                     <Col md={6}>
                       <Form.Group className="mb-3">
-                        <Form.Label>
-                          <FaUser className="me-2" />
-                          Full Name *
-                        </Form.Label>
+                        <Form.Label>Full Name *</Form.Label>
                         <Form.Control
                           type="text"
                           name="name"
@@ -254,7 +251,7 @@ const Contact = () => {
                     
                     <Col md={6}>
                       <Form.Group className="mb-3">
-                        <Form.Label>Phone Number </Form.Label>
+                        <Form.Label>Phone Number *</Form.Label>
                         <Form.Control
                           type="tel"
                           name="phone"
@@ -274,7 +271,7 @@ const Contact = () => {
                   <Row>
                     <Col md={6}>
                       <Form.Group className="mb-3">
-                        <Form.Label>Email Address </Form.Label>
+                        <Form.Label>Email Address *</Form.Label>
                         <Form.Control
                           type="email"
                           name="email"
@@ -309,7 +306,7 @@ const Contact = () => {
                   </Row>
 
                   <Form.Group className="mb-4">
-                    <Form.Label>Your Message </Form.Label>
+                    <Form.Label>Your Message *</Form.Label>
                     <Form.Control
                       as="textarea"
                       rows={5}
@@ -350,7 +347,7 @@ const Contact = () => {
                         </>
                       ) : (
                         <>
-                          <FaPaperPlane className="me-2" />
+                          <e className="me-2" />
                           Send Message
                         </>
                       )}
@@ -361,52 +358,64 @@ const Contact = () => {
             </Card>
 
             {/* Additional Info */}
-            
+            <div className="mt-4">
+              <div className="alert alert-info">
+                <h6 className="mb-2">
+                  <i className="bi bi-info-circle me-2"></i>
+                  Response Time
+                </h6>
+                <p className="mb-0 small">
+                  We typically respond within 24 hours on weekdays. For urgent inquiries, please call us directly.
+                </p>
+              </div>
+            </div>
           </Col>
         </Row>
 
-        {/* Map Section (Optional) */}
+        {/* Map Section */}
         <div className="mt-5">
-  
-  <div className="map-container rounded shadow-lg overflow-hidden">
-    <div className="map-wrapper">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3208.4142047083064!2d73.7614404!3d15.5332702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfc12be238766b%3A0xec12eed050f9602f!2sClares%20Cove%20Guest%20house!5e1!3m2!1sen!2sin!4v1768374923777!5m2!1sen!2sin" 
-        width="100%" 
-        height="450" 
-        style={{border: 0}}
-        allowFullScreen={true}
-        loading="lazy" 
-        referrerPolicy="no-referrer-when-downgrade"
-        title="Clares Cove Guest House Location"
-        className="google-map"
-      />
-    </div>
-    <div className="map-info p-3 bg-white">
-      <div className="d-flex align-items-center justify-content-between">
-        <div>
-          <FaMapMarkerAlt className="text-primary me-2" />
-          <strong>Clares Cove Guest House</strong>
+          <div className="map-container rounded shadow-lg overflow-hidden">
+            <div className="map-wrapper">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3208.4142047083064!2d73.7614404!3d15.5332702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfc12be238766b%3A0xec12eed050f9602f!2sClares%20Cove%20Guest%20house!5e1!3m2!1sen!2sin!4v1768374923777!5m2!1sen!2sin" 
+                width="100%" 
+                height="450" 
+                style={{border: 0}}
+                allowFullScreen={true}
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Clares Cove Guest House Location"
+                className="google-map"
+              />
+            </div>
+            <div className="map-info p-3 bg-white">
+              <div className="d-flex align-items-center justify-content-between">
+                <div>
+                  <FaMapMarkerAlt className="text-primary me-2" />
+                  <strong>Clares Cove Guest House</strong>
+                </div>
+                <Button 
+                  variant="outline-primary" 
+                  size="sm"
+                  href="https://maps.google.com/maps?q=Clares+Cove+Guest+house&ll=15.5332702,73.7614404&z=17"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="bi bi-arrow-up-right me-1"></i>
+                  Open in Maps
+                </Button>
+              </div>
+              <p className="mb-0 small text-muted mt-2">
+                <i className="bi bi-geo-alt me-1"></i>
+                Coastal Road, Goa, India
+              </p>
+            </div>
+          </div>
         </div>
-        <Button 
-          variant="outline-primary" 
-          size="sm"
-          href="https://maps.google.com/maps?q=Clares+Cove+Guest+house&ll=15.5332702,73.7614404&z=17"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="bi bi-arrow-up-right me-1"></i>
-          Open in Maps
-        </Button>
-      </div>
-      <p className="mb-0 small text-muted mt-2">
-        <i className="bi bi-geo-alt me-1"></i>
-        Coastal Road, Goa, India
-      </p>
-    </div>
-  </div>
-</div>
       </Container>
+      
+      {/* Add Footer Component */}
+      <Footer />
     </div>
   );
 };

@@ -32,12 +32,22 @@
    BRAND TEXT
 =========================== */
 .brand-text {
-  font-weight: bold;
-  font-size: 1.6rem;
-  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 32px;
+
+  /* text color */
+  color: #ffffff;              /* change as needed */
+
+  /* padding: Top Bottom Left Right */
+  padding: 0px 16px;
+
+  /* rounded corners */
+  border-radius: 50px;
+
+  /* optional: smooth hover effect */
+  transition: all 0.3s ease;
 }
+
+
 
 /* ===========================
    ICONS

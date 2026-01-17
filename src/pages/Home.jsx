@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Carousel, Container, Row, Col, Button, Card } from 'react-bootstrap';
+import Footer from '../components/Footer'; // Import the Footer component
 import { Link } from 'react-router-dom';
 import { FaBed, FaSwimmingPool, FaUtensils, FaWifi, FaCar, FaUmbrellaBeach, FaSpa, FaTv, FaStar } from 'react-icons/fa';
 import './Home.css';
@@ -10,46 +11,37 @@ const Home = () => {
     {
       id: 1,
       
-      
     },
     {
       id: 2,
-     
       
     },
     {
       id: 3,
-    
      
     },
     {
       id: 4,
-      
-      
+     
     },
     {
       id: 5,
-      
       
     },
     {
       id: 6,
      
-      
     },
     {
       id: 7,
-     
       
     },
     {
       id: 8,
       
-      
     },
     {
       id: 9,
-      
       
     }
   ];
@@ -60,12 +52,12 @@ const Home = () => {
 
   // Feature highlights
   const features = [
-    { icon: <FaBed />, title: "Comfortable Rooms"},
-    { icon: <FaSwimmingPool />, title: "Swimming Pool"},
-    { icon: <FaUtensils />, title: "Restaurant" },
-    { icon: <FaWifi />, title: "Free WiFi"},
-    { icon: <FaCar />, title: "Parking"},
-    { icon: <FaUmbrellaBeach />, title: "Beach Access"}
+    { icon: <FaBed />, title: "Comfortable Rooms", count: "12 Rooms" },
+    { icon: <FaSwimmingPool />, title: "Swimming Pool", count: "2 Pools" },
+    { icon: <FaUtensils />, title: "Restaurant", count: "Multi-Cuisine" },
+    { icon: <FaWifi />, title: "Free WiFi", count: "High Speed" },
+    { icon: <FaCar />, title: "Parking", count: "Secure Area" },
+    { icon: <FaUmbrellaBeach />, title: "Beach Access", count: "5 min walk" }
   ];
 
   // Handle image loading
@@ -84,8 +76,9 @@ const Home = () => {
       3: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
       4: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
       5: 'https://images.unsplash.com/photo-1540202403-a2c2908e9c5e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-        6: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',8: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-      7: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+      6: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+      7: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+      8: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
     };
     
     e.target.src = fallbackImages[id] || fallbackImages[1];
@@ -141,11 +134,9 @@ const Home = () => {
               </div>
               <Carousel.Caption className="carousel-caption-custom">
                 <div className="caption-content">
-                  
                   <h3 className="display-5 fw-bold">{image.title}</h3>
                   <p className="lead">{image.description}</p>
                   <div className="mt-4">
-                   
                     <Button 
                       variant="light" 
                       size="lg" 
@@ -169,7 +160,6 @@ const Home = () => {
             </Carousel.Item>
           ))}
         </Carousel>
-        
       </section>
 
       {/* Welcome Section */}
@@ -211,7 +201,6 @@ const Home = () => {
                     e.target.src = "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80";
                   }}
                 />
-                
               </div>
             </Col>
           </Row>
@@ -223,7 +212,6 @@ const Home = () => {
         <Container>
           <div className="text-center mb-5">
             <h2 className="display-5 fw-bold mb-3">Facilities & Amenities</h2>
-          
           </div>
           
           <Row>
@@ -307,8 +295,9 @@ const Home = () => {
         </Container>
       </section>
 
+      {/* Add Footer Component */}
+      <Footer />
       
-     
     </div>
   );
 };

@@ -3,7 +3,10 @@
   min-height: 100vh;
   width: 100%;
   background: hsla(324, 75%, 67%, 0.089);
+ padding-left: 90px;
+  padding-right: 90px;
 }
+
 
 
 /* Hero Carousel */
@@ -158,9 +161,9 @@
 .welcome-content .lead {
   color: rgba(0, 0, 0, 0.749);
   line-height: 1.8;
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 25px;
-  font-weight: 500;
+  font-weight: 400;
   text-align: left;
 }
 
@@ -174,6 +177,7 @@
 
 .welcome-content .btn {
   padding: 12px 35px;
+  font-size: 20px;
   border-radius: 30px;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -244,7 +248,7 @@
 /* Features Section */
 .features-section {
   padding: 6rem 0;
-  background: hsla(324, 75%, 67%, 0.089);
+  background: hsla(151, 90%, 44%, 0.089);
   position: relative;
 }
 
@@ -259,7 +263,7 @@
 }
 
 .features-section h2 {
-  color: rgba(0, 0, 0, 0.878);
+   color: rgba(0, 0, 0, 0.878);
   position: relative;
   font-size:32px;
   padding-bottom: 20px;
@@ -365,16 +369,19 @@
 }
 
 .feature-card .card-title {
-  color: rgba(0, 0, 0, 0.749);;
-  font-weight: 600;
+  color: rgba(0, 0, 0, 0.749);
+  font-size: 22px;
+  font-weight: 500;
   margin: 20px 0 10px;
   font-size: 20px;
 }
 
 .feature-card .card-text {
-  color: #6c757d;
-  font-size: 0.95rem;
+  color: rgba(0, 0, 0, 0.749);
+  font-size: 22px;
   font-weight: 500;
+  margin: 20px 0 10px;
+  font-size: 20px;
 }
 
 /* Testimonials Section */
@@ -543,9 +550,9 @@
 .about-preview-content .lead {
  color: rgba(0, 0, 0, 0.749);
   line-height: 1.8;
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 30px;
-  font-weight: 500;
+  font-weight: 400;
  text-align: left;
 }
 
@@ -561,9 +568,9 @@
 .about-preview-content ul li {
   color: rgba(0, 0, 0, 0.749);
   line-height: 1.8;
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 30px;
-  font-weight: 500;
+  font-weight: 400;
  text-align: left;
 }
 
@@ -578,8 +585,8 @@
 .about-preview-content .btn {
   padding: 14px 40px;
   border-radius: 30px;
-  font-weight: 600;
-  font-size: 1.1rem;
+  font-weight: 500;
+  font-size: 18px;
   transition: all 0.3s ease;
 }
 
