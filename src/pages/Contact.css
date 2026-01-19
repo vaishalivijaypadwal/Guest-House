@@ -300,10 +300,10 @@
 .contact-form-card label {
   color: rgba(0, 0, 0, 0.749);
   line-height: 1.8;
-  font-size: 20x;
-  font-weight: 600;
   text-align: left;
   margin-bottom: 6px;
+  font-size: 20x;
+  font-weight: 500;
 }
 
 /* Inputs & selects */

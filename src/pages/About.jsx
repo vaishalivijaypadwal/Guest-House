@@ -119,7 +119,7 @@ const About = () => {
                 <p className="lead">
                   The Clarem Guest House is situated in Varca South Goa, a state in western India with coastlines stretching along the Arabian Sea. Goa is one of the most loved tourist destination known for its beaches. The property is at a distance of 28 km from Goa Dabolim International Airport while Madgaon Railway Station is 9 km and Margao Bus Terminal is 10 km away.
                   For a relaxed and comfortable stay, an array of facilities are offered such as front desk, parking and room service. These spacious guest-rooms are equipped with exquisite and comfortable furniture and bedding. The apartments are fitted with amenities like television, telephone, attached bathroom and various other essential bathroom toiletries.
-                  Cool off and have a relax stay at Clarem Guest House!
+                  Cool off and have a relax stay at Clares Cone Guest House!
                 </p>
               </div>
             </Col>

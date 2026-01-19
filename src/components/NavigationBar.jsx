@@ -30,7 +30,7 @@ const NavigationBar = () => {
         <Container>
           <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
            
-            <span className="brand-text">Guest House</span>
+            <span className="brand-text">Clares Cone Guest House</span>
           </Navbar.Brand>
           
           {/* Desktop Navigation */}

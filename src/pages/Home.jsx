@@ -52,13 +52,14 @@ const Home = () => {
 
   // Feature highlights
   const features = [
-    { icon: <FaBed />, title: "Comfortable Rooms" },
-    { icon: <FaSwimmingPool />, title: "Swimming Pool"},
-    { icon: <FaUtensils />, title: "Restaurant"},
-    { icon: <FaWifi />, title: "Free WiFi" },
-    { icon: <FaCar />, title: "Parking" },
-    { icon: <FaUmbrellaBeach />, title: "Beach Access"}
-  ];
+  { icon: <FaBed />, title: "Comfortable Rooms", color: "#3498db" },       // Blue
+  { icon: <FaSwimmingPool />, title: "Swimming Pool", color: "#1abc9c" }, // Teal
+  { icon: <FaUtensils />, title: "Restaurant", color: "#e67e22" },        // Orange
+  { icon: <FaWifi />, title: "Free WiFi", color: "#9b59b6" },              // Purple
+  { icon: <FaCar />, title: "Parking", color: "#2ecc71" },                // Green
+  { icon: <FaUmbrellaBeach />, title: "Beach Access", color: "#f1c40f" }   // Yellow
+];
+
 
   // Handle image loading
   const handleImageLoad = (id) => {

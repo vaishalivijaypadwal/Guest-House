@@ -1,8 +1,11 @@
-.App {
+html, body, #root, .App {
+ .App {
   text-align: center;
-  width: 100vw;        /* Full viewport width */
+  width: 100%;  /* Changed from 100vw to 100% */
   max-width: 100%;
 }
+}
+
 
 
 .App-logo {

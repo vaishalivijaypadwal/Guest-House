@@ -70,7 +70,7 @@ const Footer = () => {
             <ul className="contact-info-list">
               <li>
                 <FaEnvelope className="footer-icon" />
-                <a href="mailto:KinaraResort@gmail.com">ClaresCoveGuestHouse@gmail.com</a>
+                <a href="mailto:ClaresCoveGuestHouse@gmail.com">ClaresCoveGuestHouse@gmail.com</a>
               </li>
               <li>
                 <FaPhoneAlt className="footer-icon" />
